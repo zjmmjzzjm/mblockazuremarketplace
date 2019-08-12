@@ -9,7 +9,7 @@
                 "type": "Microsoft.Common.TextBox",
                 "label": "Virtual Machine name",
                 "toolTip": "The name of the Virtual Machine.",
-                "defaultValue": "linux-vm",
+                "defaultValue": "mblockServer",
                 "constraints": {
                     "required": true,
                     "regex": "^[a-z0-9A-Z-]{3,79}$",

@@ -134,7 +134,7 @@
     },
     "publicIpDns": {
       "type": "string",
-      "defaultValue": "[concat('linux-vm-', uniqueString(resourceGroup().id))]",
+      "defaultValue": "[concat('mblock-server-', uniqueString(resourceGroup().id))]",
       "metadata": {
         "description": "DNS of the public ip address for the VM"
       }
@@ -187,7 +187,7 @@
     },
     "networkSecurityGroupName": "nsg-ssh",
     "scriptFolder": "scripts",
-    "scriptFileName": "install.sh",
+    "scriptFileName": "install.sh"
   },
   "resources": [
     {
@@ -361,9 +361,7 @@
             "typeHandlerVersion": "2.0",
             "autoUpgradeMinorVersion": true,
             "settings": {
-              "fileUris": [
-                ""
-              ]
+              "fileUris": ["https://raw.githubusercontent.com/zjmmjzzjm/mblockazuremarketplace/master/scripts/install.sh"]
             },
             "protectedSettings": {
               "commandToExecute": "[concat('bash ', variables('scriptFileName'))]"
